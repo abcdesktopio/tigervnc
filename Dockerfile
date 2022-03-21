@@ -19,7 +19,7 @@ RUN sed -i '/deb-src/s/^# //' /etc/apt/sources.list
 # run update
 RUN apt update
 # install dev, dep and sources
-RUN apt-get install -y --no-install-recommends fakeroot devscripts devscripts binutils wget
+RUN apt-get install -y --no-install-recommends ca-certificates fakeroot devscripts devscripts binutils wget
 RUN apt-get build-dep -y tigervnc 
 
 # download files 
